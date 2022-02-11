@@ -16,5 +16,15 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div class="cursor"></div>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      document.addEventListener("mousemove", (e) => {
+        cursor.setAttribute(
+          "style",
+          "top :" + (e.pageY - 5) + "px; left:" + (e.pageX - 5) + "px;"
+        );
+      });
+    </script>
   </body>
 </html>
