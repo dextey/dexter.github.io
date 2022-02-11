@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <div>Dexter</div>
-      <div className="content">developer</div>
+      <div className="content">Blockchain developer</div>
     </div>
   );
 }
