@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  font-family: monospace;
+  padding-top: 15%;
+}
+
+.content {
+  font-size: 0.5rem;
+}
