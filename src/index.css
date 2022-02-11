@@ -1,4 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Road+Rage&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
-  margin: 0;
-  background-color: rgb(43, 44, 59);
+  background-color: rgb(66, 64, 82);
+  font-family: "Poppins", sans-serif;
+}
+* {
+  cursor: none !important;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cursor {
+  position: absolute;
+  background-color: yellow;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.username {
+  font-family: "Road Rage", cursive;
+  font-size: 12rem;
+  letter-spacing: 0.5rem;
+}
+
+.f1 {
+  animation: dropName 2s linear forwards;
+}
+.f2 {
+  animation: dropName 2.15s linear forwards;
+}
+.f3 {
+  animation: dropName 2.1s linear forwards;
+}
+.f4 {
+  animation: dropName 2.5s linear forwards;
+}
+.f5 {
+  animation: dropName 2.3s linear forwards;
+}
+.f6 {
+  animation: dropName 2.2s linear forwards;
+}
+
+@keyframes dropName {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(150px);
+  }
+  55% {
+    transform: translateY(125px) rotateZ(20deg);
+  }
+  60% {
+    transform: translateY(150px);
+  }
+  65% {
+    transform: translateY(130px) rotateZ(-20deg);
+  }
+  75% {
+    transform: translateY(150px);
+  }
+  80% {
+    transform: translateY(140px) rotateZ(10deg);
+  }
+  100% {
+    transform: translateY(150px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}
+
+.progressbar {
+  border: 0px;
+  background-color: rgba(173, 116, 143, 0.568);
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+}
+
+.progressbar > div {
+  background-color: rgb(255, 0, 128);
+  /* width: 40%; */
+  /* Adjust with JavaScript */
+  height: 6px;
+  border-radius: 10px;
 }
