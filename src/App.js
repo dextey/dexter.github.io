@@ -6,7 +6,7 @@ import Projects from "./Components/Projects";
 function App() {
   return (
     <>
-      <div className="mail flex justify-center items-center rounded-full bg-yellow-300">
+      <div className="mail flex justify-center items-center rounded-full hover:bg-blue-300 bg-yellow-300">
         <a href="mailto:dexterdevmode@gmail.com">
           <img src="mail.png" alt="mail" />
         </a>

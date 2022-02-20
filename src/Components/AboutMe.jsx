@@ -23,10 +23,9 @@ function AboutMe() {
             </Bounce>
             <span className="m-2 my-6">
               <Fade bottom>
-                I'm currently a blockchain developer researching on ethereum and
-                other blockchain technologies and also working on ethereum based
-                projects.I'm also a full stack web developer working with react
-                and node js.
+                I'm a full stack web developer working with react and node
+                js.I'm currently a researching on ethereum and other blockchain
+                technologies and also working on ethereum based projects.
               </Fade>
             </span>
             <span className="font-fest  font-light text-gray-400">
@@ -45,12 +44,12 @@ function AboutMe() {
               </a>
               <a
                 href="https://linkedin.com"
-                className="m-4 font-bold hover:text-yellow-300"
+                className="m-4 font-bold hover:text-yellow-300 hidden"
               >
                 LinkedIn
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/dexteeeey"
                 className="m-4 font-bold hover:text-yellow-300"
               >
                 Twitter

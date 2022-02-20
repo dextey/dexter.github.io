@@ -1,8 +1,7 @@
 import React from "react";
-import { Zoom, Fade, Bounce } from "react-reveal";
+import { Fade, Slide } from "react-reveal";
 
 function Skill() {
-  //   const skills = ["Javascript", "Solidity"];
   const Languages = [
     {
       name: "Javascript",
@@ -78,14 +77,18 @@ export default Skill;
 
 function SkillCard({ skill }) {
   return (
-    <div className=" flex items-center  w-full my-5">
-      <div className=" p-1 w-4/12 sm:text-[2rem] text-[1.4rem] sm:mx-32 text-pink-300 ">
-        {skill.name}
-      </div>
+    <Slide>
+      <div className=" flex items-center  w-full my-5">
+        <div className=" p-1 w-4/12 sm:text-[2rem] text-[1.4rem] sm:mx-32 text-pink-300 ">
+          {skill.name}
+        </div>
 
-      <div className=" flex-1 sm:w-8/12 w-4/12 h-min progressbar">
-        <div style={{ width: skill.percentage }}></div>
+        <div className=" flex-1 sm:w-8/12 w-4/12 h-min progressbar">
+          <Slide left>
+            <div style={{ width: skill.percentage }}></div>
+          </Slide>
+        </div>
       </div>
-    </div>
+    </Slide>
   );
 }
