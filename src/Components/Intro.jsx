@@ -1,25 +1,38 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Intro() {
   return (
-    <div className="flex flex-col items-center  ">
-      <div className="flex font-extrabold text-9xl username text-[#ffffff] mx-4 hover:animate-pulse">
-        <span className="f1">D</span>
-        <span className="f2">e</span>
-        <span className="f3">x</span>
-        <span className="f4">t</span>
-        <span className="f5">e</span>
-        <span className="f6">r</span>
-      </div>
-      <div className=" pt-48 flex flex-col text-center">
-        <div className=" font-bold text-cyan-300 text-3xl  hover:scale-105">
-          Blockchain Developer
+    <section className="h-[100vh] bg-[#ffe600] overflow-hidden flex sm:flex-row flex-col items-center justify-evenly">
+      <div className="flex">
+        <div className="flex flex-col  ">
+          {/* <div className="flex font-extrabold sm:text-9xl text-7xl username text-[#000000] mx-4 "> */}
+          <div className="username">
+            <span className="split-text" data-text="DEXTER">
+              DEXTER
+            </span>
+          </div>
+          <div className="  flex flex-col ">
+            <div className=" font-extrabold m-4 mx-5  text-3xl profileName  ">
+              <h1>SAYANTH AZHIKODAN .</h1>
+            </div>
+            <div className="m-4 mx-5 font-mono text-2xl ">
+              A cyber nerd trying to fix bits in internet
+            </div>
+          </div>
         </div>
-        <div className="m-3 font-mono text-2xl text-yellow-100">
-          A cyber nerd trying to fix bits in internet
-        </div>
       </div>
-    </div>
+      <div className="profile p-10  hidden sm:block ">
+        <img src="chain.gif" alt="missed it!" />
+      </div>
+      <div className="absolute bottom-7 mb-7 ">
+        <Link
+          to="/about"
+          className="px-3 rounded-full font-extrabold text-3xl border-[3px] text-white border-black animate-pulse  "
+        >
+          &gt;
+        </Link>
+      </div>
+    </section>
   );
 }
 
