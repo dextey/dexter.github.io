@@ -5,15 +5,15 @@ function Skill() {
   const Languages = [
     {
       name: "Javascript",
-      percentage: "75%",
+      percentage: "70%",
     },
     {
       name: "Solidity",
-      percentage: "45%",
+      percentage: "35%",
     },
     {
       name: "React Js",
-      percentage: "80%",
+      percentage: "75%",
     },
     {
       name: "Node ",
@@ -31,25 +31,31 @@ function Skill() {
   const Database = [
     {
       name: "SQL",
-      percentage: "75%",
+      percentage: "55%",
     },
     {
       name: "MongoDB",
-      percentage: "65%",
+      percentage: "50%",
     },
   ];
   const Blockchain = [
-    {
-      name: "Ethereum",
-      percentage: "45%",
-    },
+    // {
+    //   name: "Ethereum",
+    //   percentage: "45%",
+    // },
   ];
 
   return (
     <div className="mr-10">
-      <div className="flex justify-center pt-10">
+      <div className="flex justify-center items-center pt-10">
         <Fade bottom>
-          <span className="text-5xl  text-white">Expertise</span>
+          <span
+            to="/about"
+            className="px-3 text-center rounded-full mx-10 font-extrabold text-3xl border-[1px] text-white border-black animate-pulse  "
+          >
+            &lt;
+          </span>
+          <span className="text-5xl font-mono text-white">i am good at </span>
         </Fade>
       </div>
       <div className="grid lg:grid-cols-2 ">
@@ -79,7 +85,7 @@ function SkillCard({ skill }) {
   return (
     <Slide>
       <div className=" flex items-center  w-full my-5">
-        <div className=" p-1 w-4/12 sm:text-[2rem] text-[1.4rem] sm:mx-32 text-pink-300 ">
+        <div className=" p-1 w-4/12 sm:text-[2rem] text-[1.4rem] sm:mx-32 text-yellow-100 ">
           {skill.name}
         </div>
 

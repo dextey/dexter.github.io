@@ -1,12 +1,16 @@
 import React from "react";
 import { Zoom, Fade, Bounce } from "react-reveal";
+import NavBar from "./NavBar";
 
 function AboutMe() {
   return (
     <>
+      <NavBar />
       <div className="flex justify-center ">
         <Zoom bottom>
-          <span className="text-6xl p-16 text-white">About Me</span>
+          <span className="text-5xl font-mono p-16 font-extrabold text-yellow-200">
+            Who am !?
+          </span>
         </Zoom>
       </div>
       <div className="flex justify-between mb-16">
@@ -24,8 +28,8 @@ function AboutMe() {
             <span className="m-2 my-6">
               <Fade bottom>
                 I'm a full stack web developer working with react and node
-                js.I'm currently a researching on ethereum and other blockchain
-                technologies and also working on ethereum based projects.
+                js.I'm currently researching on blockchain technologies mainly
+                ethereum and also working on ethereum based projects.
               </Fade>
             </span>
             <span className="font-fest  font-light text-gray-400">

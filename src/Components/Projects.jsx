@@ -50,7 +50,7 @@ function Projects() {
               href="https://github.com/dextey"
               className="text-cyan-400 sm:text-[1.2rem] py-2 "
             >
-              here
+              ---&gt;
             </a>
           </div>
         </Slide>
