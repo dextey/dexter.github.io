@@ -15,6 +15,10 @@ function Intro() {
             <div className=" font-extrabold m-4 mx-5  text-3xl profileName  ">
               <h1>SAYANTH AZHIKODAN .</h1>
             </div>
+            <span className="m-1 mx-5 font-extrabold font-serif text-2xl">
+              {" "}
+              BLOCKCHAIN DEVELOPER
+            </span>
             <div className="m-4 mx-5 font-mono text-2xl ">
               A cyber nerd trying to fix bits in internet
             </div>
@@ -27,7 +31,7 @@ function Intro() {
       <div className="absolute bottom-7 mb-7 ">
         <Link
           to="/about"
-          className="px-3 rounded-full font-extrabold text-3xl border-[3px] text-white border-black animate-pulse  "
+          className="px-3 rounded-full font-extrabold text-3xl border-[4px] text-white border-black animate-pulse  "
         >
           &gt;
         </Link>
