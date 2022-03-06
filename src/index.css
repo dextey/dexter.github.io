@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Road+Rage&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 body {
   background-color: rgb(66, 64, 82);
+  background-color: #4a475a;
   font-family: "Poppins", sans-serif;
   width: 100%;
 }
@@ -17,7 +19,7 @@ body {
 
 .cursor {
   position: absolute;
-  background-color: yellow;
+  background-color: rgb(0, 0, 0);
   width: 15px;
   height: 15px;
   border-radius: 10px;
@@ -25,9 +27,11 @@ body {
 }
 
 .username {
-  font-family: "Road Rage", cursive;
-  font-size: 12rem;
-  letter-spacing: 0.5rem;
+  font-family: "RocknRoll One", sans-serif;
+  font-style: italic;
+  position: relative;
+  /* font-size: 8rem; */
+  /* letter-spacing: 0.5rem; */
 }
 
 .f1 {
@@ -49,35 +53,6 @@ body {
   animation: dropName 2.2s linear forwards;
 }
 
-@keyframes dropName {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(150px);
-  }
-  55% {
-    transform: translateY(125px) rotateZ(20deg);
-  }
-  60% {
-    transform: translateY(150px);
-  }
-  65% {
-    transform: translateY(130px) rotateZ(-20deg);
-  }
-  75% {
-    transform: translateY(150px);
-  }
-  80% {
-    transform: translateY(140px) rotateZ(10deg);
-  }
-  100% {
-    transform: translateY(150px);
-    opacity: 1;
-  }
-}
-
 @media (max-width: 1024px) {
   .cursor {
     display: none;
@@ -86,28 +61,15 @@ body {
 
 .progressbar {
   border: 0px;
-  background-color: rgba(173, 116, 143, 0.568);
+  background-color: rgba(173, 148, 116, 0.568);
   border-radius: 13px;
-  /* (height of inner div) / 2 + padding */
 }
 
 .progressbar > div {
-  background-color: rgb(255, 0, 128);
-  /* width: 40%; */
-  /* Adjust with JavaScript */
+  background-color: rgb(255, 188, 43);
+
   height: 6px;
   border-radius: 10px;
-}
-
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.container > section {
-  height: 100vh;
-  scroll-snap-align: start;
 }
 
 .mail {
@@ -121,4 +83,111 @@ body {
 .mail > a > img {
   width: 30px;
   height: 30px;
+}
+
+.profileName {
+  position: relative;
+  width: max-content;
+  letter-spacing: 5px;
+}
+
+.profileName > h1::before,
+h1::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.profileName > h1::before {
+  background-color: #ffe600;
+  animation: typewriter 4s steps(18) 2s forwards;
+}
+.profileName > h1::after {
+  width: 1.3rem;
+  background-color: #4a475a;
+  animation: typewriter 4s steps(18) 2s forwards, blink 650ms steps(18) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+.username {
+  font-size: 8rem;
+  font-weight: bolder;
+  display: block;
+}
+.username:hover::before {
+  content: " ";
+  background-color: #ffffff;
+  height: 0.7rem;
+  /* width: 85%; */
+  z-index: 1;
+  position: absolute;
+  border-radius: 10px;
+  top: 50%;
+
+  animation: expand 300ms ease both;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.username:hover > .split-text {
+  position: relative;
+  color: white;
+  line-height: 1;
+  animation: forwards;
+}
+
+.username:hover > .split-text::before,
+.username:hover > .split-text::after {
+  color: #000000;
+  position: absolute;
+  display: block;
+  content: attr(data-text);
+  max-height: 0.55em;
+  overflow: hidden;
+  left: 0;
+  width: 100vh;
+  animation: forwards;
+}
+.username:hover > .split-text::before {
+  top: 30px;
+  animation: skewR 100ms ease forwards;
+}
+.username:hover > .split-text::after {
+  bottom: 27px;
+  max-height: 0.5em;
+  display: flex;
+  align-items: flex-end;
+  animation: skewL 300ms ease forwards;
+}
+
+@keyframes skewR {
+  to {
+    transform: translateX(10px);
+  }
+}
+@keyframes skewL {
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
 }
