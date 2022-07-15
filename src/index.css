@@ -8,6 +8,7 @@ body {
   background-color: #4a475a;
   font-family: "Poppins", sans-serif;
   width: 100%;
+  scrollbar-width: 0;
 }
 * {
   cursor: none !important;
@@ -189,5 +190,16 @@ h1::after {
 @keyframes blink {
   to {
     background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .username {
+    font-size: 4rem;
+  }
+
+  .split-text::after,
+  .split-text::after {
+    font-size: 4rem;
   }
 }

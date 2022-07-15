@@ -1,6 +1,5 @@
 import AboutMe from "./Components/AboutMe";
 import Intro from "./Components/Intro";
-import Skill from "./Components/Skill";
 import Projects from "./Components/Projects";
 import { Switch, Route, Routes } from "react-router-dom";
 function App() {
@@ -17,11 +16,6 @@ function App() {
         </Route>
         <Route path="/about">
           <AboutMe />
-        </Route>
-        <Route path="/skills">
-          <Skill />
-        </Route>
-        <Route path="/projects">
           <Projects />
         </Route>
       </Switch>
