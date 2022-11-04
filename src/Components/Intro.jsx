@@ -21,7 +21,7 @@ function Intro() {
                   ReactJS | NodeJS | Blockchain Developer
                 </span>
                 <div className="m-4 mx-5 font-mono text-2xl ">
-                  A cyber nerd trying to fix bits in internet
+                  A cyber nerd trying to fix bits in mesh network
                 </div>
               </div>
             </div>
