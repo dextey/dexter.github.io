@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Intro() {
   return (
-    <div className="full bg-[#ffe600]">
+    <div className="flex h-full bg-[#141e2f] text-white">
       <div className="container mx-auto ">
         <section className=" h-[100vh]  overflow-hidden flex sm:flex-row flex-col items-center justify-evenly">
           <div className="flex justify-around  ">
@@ -21,13 +21,13 @@ function Intro() {
                   ReactJS | NodeJS | Blockchain Developer
                 </span>
                 <div className="m-4 mx-5 font-mono text-2xl ">
-                  A cyber nerd trying to fix bits in mesh network
+                  A cyber nerd trying to fix bits in network
                 </div>
               </div>
             </div>
           </div>
-          <div className="profile p-10  hidden lg:block ">
-            <img src="chain.gif" alt="missed it!" />
+          <div className="profile p-10  hidden lg:block rounded-full">
+            <img src="chain.gif" alt="missed it!" className="rounded-full" />
           </div>
           <div className="absolute bottom-7 mb-7 ">
             <Link

@@ -1,12 +1,11 @@
 import React from "react";
-import { Zoom, Fade, Bounce } from "react-reveal";
 import NavBar from "./NavBar";
 
 function AboutMe() {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <NavBar />
-      <div className="container mx-auto">
+      <div className="flex flex-col h-screen justify-center container mx-auto">
         <div className="flex ">
           <span className="text-5xl font-mono px-3 py-16 font-extrabold text-yellow-200">
             Who am !?
@@ -22,8 +21,11 @@ function AboutMe() {
                 &lt; description &gt;
               </span>
               <span className="m-2 my-3">
-                I'm a full stack web developer working with react and node
-                js.I'm currently researching on blockchain technologies mainly
+                I'm a full stack web developer working with react and node js. I
+                am motivated to upgrade and expand my skill set through
+                mentorship and challenging projects. I enjoy working
+                collaboratively but can also run with projects independently.
+                I'm currently researching on blockchain technologies mainly
                 ethereum and also working on ethereum based projects.
               </span>
               <span className="font-fest  font-light text-gray-400">
@@ -56,7 +58,7 @@ function AboutMe() {
           <div className="sm:w-3/12"></div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

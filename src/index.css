@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
 body {
   background-color: rgb(66, 64, 82);
   background-color: #4a475a;
@@ -74,9 +75,6 @@ body {
 }
 
 .mail {
-  position: absolute;
-  right: 30px;
-  bottom: 10px;
   width: 50px;
   height: 50px;
 }
@@ -103,7 +101,7 @@ h1::after {
 }
 
 .profileName > h1::before {
-  background-color: #ffe600;
+  background-color: #141e2f;
   animation: typewriter 4s steps(18) 2s forwards;
 }
 .profileName > h1::after {
@@ -147,14 +145,14 @@ h1::after {
 
 .username:hover > .split-text {
   position: relative;
-  color: white;
+  color: rgb(89, 89, 89);
   line-height: 1;
   animation: forwards;
 }
 
 .username:hover > .split-text::before,
 .username:hover > .split-text::after {
-  color: #000000;
+  color: #ffffff;
   position: absolute;
   display: block;
   content: attr(data-text);
