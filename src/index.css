@@ -5,8 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 
 body {
-  background-color: rgb(66, 64, 82);
-  background-color: #4a475a;
+  background-color: #0b0f2a;
   font-family: "Poppins", sans-serif;
   width: 100%;
   scrollbar-width: 0;
@@ -21,7 +20,7 @@ body {
 
 .cursor {
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   width: 15px;
   height: 15px;
   border-radius: 10px;
@@ -74,16 +73,6 @@ body {
   border-radius: 10px;
 }
 
-.mail {
-  width: 50px;
-  height: 50px;
-}
-
-.mail > a > img {
-  width: 30px;
-  height: 30px;
-}
-
 .profileName {
   position: relative;
   width: max-content;
@@ -121,7 +110,7 @@ h1::after {
   font-weight: bolder;
   display: block;
 }
-.username:hover::before {
+.username::before {
   content: " ";
   background-color: #ffffff;
   height: 0.7rem;
@@ -132,6 +121,7 @@ h1::after {
   top: 50%;
 
   animation: expand 300ms ease both;
+  animation-delay: 3s;
 }
 
 @keyframes expand {
@@ -143,15 +133,16 @@ h1::after {
   }
 }
 
-.username:hover > .split-text {
+.username > .split-text {
   position: relative;
   color: rgb(89, 89, 89);
   line-height: 1;
   animation: forwards;
+  animation-delay: 3s;
 }
 
-.username:hover > .split-text::before,
-.username:hover > .split-text::after {
+.username > .split-text::before,
+.username > .split-text::after {
   color: #ffffff;
   position: absolute;
   display: block;
@@ -161,17 +152,20 @@ h1::after {
   left: 0;
   width: 100vh;
   animation: forwards;
+  animation-delay: 3s;
 }
-.username:hover > .split-text::before {
+.username > .split-text::before {
   top: 30px;
-  animation: skewR 100ms ease forwards;
+  animation: skewR 300ms ease forwards;
+  animation-delay: 3s;
 }
-.username:hover > .split-text::after {
+.username > .split-text::after {
   bottom: 27px;
   max-height: 0.5em;
   display: flex;
   align-items: flex-end;
   animation: skewL 300ms ease forwards;
+  animation-delay: 3s;
 }
 
 @keyframes skewR {
