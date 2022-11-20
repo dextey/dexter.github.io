@@ -1,5 +1,4 @@
 import React from "react";
-import { Zoom, Slide } from "react-reveal";
 
 function Projects() {
   const projects = [
@@ -37,7 +36,7 @@ function Projects() {
   ];
 
   return (
-    <div className="container  mx-auto flex flex-col  md:h-screen pt-32 justify-center">
+    <div className=" flex flex-col  md:h-screen pt-32 justify-center mb-60">
       <div className=" ">
         <span className="text-5xl font px-3 font-extrabold text-yellow-200">
           blueprints
@@ -60,21 +59,20 @@ function Projects() {
         {projects.map((project) => {
           return <Project project={project} />;
         })}
-        <Slide right>
-          <div className="flex flex-col  hover:bg-pink-300   p-4 m-4 bg-pink-100 rounded-md items-start">
-            <h3 className="text-2xl font-bold font-mono ">Others</h3>
-            <span className="font-mono text-[16px] sm:py-2 sm:block hidden  ">
-              Not yet, Here you go for more
-            </span>
-            <a
-              href="https://github.com/dextey"
-              target="_blank"
-              className="bg-slate-300 rounded-full px-4 sm:text-[1rem] "
-            >
-              github
-            </a>
-          </div>
-        </Slide>
+
+        <div className="flex flex-col  hover:bg-pink-300   p-4 m-4 bg-pink-100 rounded-md items-start">
+          <h3 className="text-2xl font-bold font-mono ">Others</h3>
+          <span className="font-mono text-[16px] sm:py-2 sm:block hidden  ">
+            Not yet, Here you go for more
+          </span>
+          <a
+            href="https://github.com/dextey"
+            target="_blank"
+            className="bg-slate-300 rounded-full px-4 sm:text-[1rem] "
+          >
+            github
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -84,40 +82,38 @@ export default Projects;
 
 const Project = ({ project }) => {
   return (
-    <Slide left>
-      <div className="flex flex-col  hover:bg-yellow-200    m-4 bg-slate-500 rounded-md items-start">
-        <div className="w-full">
-          {project.image && (
-            <img
-              src={project.image}
-              alt=""
-              className="rounded-t-md h-[270px] w-full"
-            />
-          )}
-        </div>
-        <div className="flex flex-col p-4">
-          <h3 className="text-2xl font-bold font-mono ">{project.name}</h3>
-          <span className="  font-mono text-[16px] sm:py-2 sm:block   ">
-            {project.desc}
-          </span>
-          <div className="flex gap-3 my-3">
-            <a
-              target="_blank"
-              href={project.link}
-              className="bg-slate-300 rounded-full px-4 sm:text-[1rem] hover:bg-black hover:text-white "
-            >
-              {project.name}
-            </a>
-            <a
-              target="_blank"
-              href={project.github}
-              className="bg-slate-300 rounded-full px-4 sm:text-[1rem] hover:bg-black hover:text-white "
-            >
-              Github
-            </a>
-          </div>
+    <div className="flex flex-col  hover:bg-yellow-200    m-4 bg-slate-500 rounded-md items-start">
+      <div className="w-full">
+        {project.image && (
+          <img
+            src={project.image}
+            alt=""
+            className="rounded-t-md h-[270px] w-full"
+          />
+        )}
+      </div>
+      <div className="flex flex-col p-4">
+        <h3 className="text-2xl font-bold font-mono ">{project.name}</h3>
+        <span className="  font-mono text-[16px] sm:py-2 sm:block   ">
+          {project.desc}
+        </span>
+        <div className="flex gap-3 my-3">
+          <a
+            target="_blank"
+            href={project.link}
+            className="bg-slate-300 rounded-full px-4 sm:text-[1rem] hover:bg-black hover:text-white "
+          >
+            {project.name}
+          </a>
+          <a
+            target="_blank"
+            href={project.github}
+            className="bg-slate-300 rounded-full px-4 sm:text-[1rem] hover:bg-black hover:text-white "
+          >
+            Github
+          </a>
         </div>
       </div>
-    </Slide>
+    </div>
   );
 };

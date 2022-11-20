@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function Header() {
   return (
-    <div className="w-full flex justify-between h-[50px] bg-slate-700">
+    <header className="w-full flex justify-between h-[50px]">
       <div className="m-3  text-3xl font-extrabold text-yellow-200 font-fest ">
         <Link to={"/"}> Dexter</Link>
       </div>
@@ -16,8 +16,8 @@ function NavBar() {
           Contact me
         </a>
       </div>
-    </div>
+    </header>
   );
 }
 
-export default NavBar;
+export default Header;
