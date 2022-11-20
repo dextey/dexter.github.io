@@ -30,7 +30,7 @@ body {
   pointer-events: none;
   /* animation: cursorPulse 0.8s infinite ease-out alternate-reverse; */
   mix-blend-mode: difference;
-  transition-duration: 500ms;
+  transition-duration: 350ms;
   transition-timing-function: ease-out;
 }
 

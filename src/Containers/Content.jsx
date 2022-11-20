@@ -9,7 +9,7 @@ function Content() {
     <div className="container mx-auto">
       <Header />
       <AboutMe />
-      <Projects />
+      {/* <Projects /> */}
       <Footer />
     </div>
   );

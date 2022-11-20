@@ -1,17 +1,32 @@
 import React from "react";
 import "./About.css";
+
 function About() {
   return (
-    <div className="flex px-10  h-screen    text-5xl  text-white font-bold">
-      <div className="flex flex-col pt-[14vh] ">
-        <div className="text-4xl sm:text-8xl wipeIn ">Hey there,</div>
-        <div className="mt-5">
-          <div className="wipeIn">
-            Myself, <span>Dexter</span>
+    <div className="flex px-10  h-screen  items-center  text-5xl  text-white font-bold about-container">
+      <div className="flex flex-col  ">
+        <div className="text-5xl sm:text-8xl wipeIn ">Hi there,</div>
+        <div className="mt-8">
+          <div className="wipeIn text-3xl sm:text-7xl flex gap-2 items-center name">
+            I'm
+            <span className="mx-2 relative ">
+              <span className="font-extrabold text-4xl sm:text-8xl letterD">
+                D
+              </span>
+              <span className="ml-5 sm:ml-16">exter</span>
+            </span>
           </div>
-          <div className="mt-4 wipeIn desc text-2xl sm:text-5xl">
-            A Full stack web developer who is passionate
-            <br /> about building stuffs!
+          <div className="mt-4 wipeIn desc text-xl sm:text-5xl w-9/12">
+            A Full stack web developer who is passionate about building stuffs!
+          </div>
+        </div>
+      </div>
+      <div className="planetPositon">
+        <div className="planet-container">
+          <div className="revolve">
+            <div className="planet-container">
+              <div className="planet"></div>
+            </div>
           </div>
         </div>
       </div>
