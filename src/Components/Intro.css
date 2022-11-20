@@ -1,0 +1,136 @@
+.username {
+  font-family: "RocknRoll One", sans-serif;
+  font-style: italic;
+  position: relative;
+  /* font-size: 8rem; */
+  /* letter-spacing: 0.5rem; */
+}
+
+@media (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}
+
+.profileName {
+  position: relative;
+  width: max-content;
+  letter-spacing: 5px;
+}
+
+.profileName > h1::before,
+h1::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.profileName > h1::before {
+  background-color: #141e2f;
+  animation: typewriter 4s steps(18) 2s forwards;
+}
+.profileName > h1::after {
+  width: 1.3rem;
+  background-color: #4a475a;
+  animation: typewriter 4s steps(18) 2s forwards, blink 650ms steps(18) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+.username {
+  font-size: 8rem;
+  font-weight: bolder;
+  display: block;
+}
+.username::before {
+  content: " ";
+  background-color: #ffffff;
+  height: 0.7rem;
+  /* width: 85%; */
+  z-index: 1;
+  position: absolute;
+  border-radius: 10px;
+  top: 50%;
+
+  animation: expand 300ms ease both;
+  animation-delay: 3s;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.username > .split-text {
+  position: relative;
+  color: rgb(89, 89, 89);
+  line-height: 1;
+  animation: forwards;
+  animation-delay: 3s;
+}
+
+.username > .split-text::before,
+.username > .split-text::after {
+  color: #ffffff;
+  position: absolute;
+  display: block;
+  content: attr(data-text);
+  max-height: 0.55em;
+  overflow: hidden;
+  left: 0;
+  width: 100vh;
+  animation: forwards;
+  animation-delay: 3s;
+}
+.username > .split-text::before {
+  top: 30px;
+  animation: skewR 300ms ease forwards;
+  animation-delay: 3s;
+}
+.username > .split-text::after {
+  bottom: 27px;
+  max-height: 0.5em;
+  display: flex;
+  align-items: flex-end;
+  animation: skewL 300ms ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes skewR {
+  to {
+    transform: translateX(10px);
+  }
+}
+@keyframes skewL {
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .username {
+    font-size: 4rem;
+  }
+
+  .split-text::after,
+  .split-text::after {
+    font-size: 4rem;
+  }
+}

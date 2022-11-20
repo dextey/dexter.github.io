@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Intro.css";
+
 function Intro() {
   return (
     <div className="flex h-full bg-[#141e2f] text-white">

@@ -10,9 +10,11 @@ function App() {
           <Intro />
         </Route>
         <Route path="/about">
-          <AboutMe />
+          <div className="container mx-auto">
+            <AboutMe />
 
-          <Projects />
+            <Projects />
+          </div>
         </Route>
       </Switch>
     </>

@@ -28,6 +28,13 @@
           "top :" + (e.pageY - 15) + "px; left:" + (e.pageX - 15) + "px;"
         );
       });
+
+      document.addEventListener("click", () => {
+        cursor.classList.add("cursorClick");
+        setTimeout(() => {
+          cursor.classList.remove("cursorClick");
+        }, 700);
+      });
     </script>
   </body>
 </html>
