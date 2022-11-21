@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import Planet from "./Planet";
 
 function About() {
   return (
@@ -21,15 +22,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="planetPositon">
-        <div className="planet-container">
-          <div className="revolve">
-            <div className="planet-container">
-              <div className="planet"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Planet />
     </div>
   );
 }

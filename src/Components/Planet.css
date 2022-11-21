@@ -1,0 +1,131 @@
+.planetPositon {
+  position: absolute;
+  top: 25%;
+  right: 35%;
+  transform: rotateZ(-20deg);
+  z-index: -1000;
+}
+
+.sun {
+  animation: popInSun 0.3s ease-out 3.6s forwards;
+
+  position: absolute;
+  opacity: 0;
+
+  left: -17%;
+  top: -10%;
+  width: 270px;
+  height: 270px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+}
+
+.planet-container {
+  animation: popIn 0.3s ease-out 3.5s forwards;
+  position: absolute;
+  /* background: rgb(228, 135, 135); */
+  border-radius: 50%;
+  /* width: 200px; */
+  /* height: 200px; */
+  transform: scaleX(4);
+  /* transform: rotateY(40deg); */
+}
+
+.planet {
+  /* position: absolute; */
+  animation: popInPlanet 0.3s ease-out 3.8s forwards;
+  background-color: rgb(255, 0, 0);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.revolve {
+  height: 100%;
+  width: 100%;
+  animation: revo 10s infinite linear;
+}
+
+.revolve-container {
+  width: 3.5rem;
+  height: 3.5rem;
+  animation: a 10s infinite linear;
+}
+
+@keyframes a {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes revo {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.planetIndex {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: aqua; */
+  animation: switchBack 10s infinite;
+}
+
+@keyframes switchBack {
+  0% {
+    z-index: 10;
+  }
+
+  10% {
+    z-index: -99;
+  }
+
+  30%,
+  100% {
+    z-index: 10;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    height: 0;
+    width: 0;
+    border: 1px solid white;
+  }
+
+  100% {
+    border: 1px solid white;
+    height: 200px;
+    width: 200px;
+  }
+}
+@keyframes popInPlanet {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(0.26);
+    opacity: 1;
+  }
+}
+
+@keyframes popInSun {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(0.25);
+  }
+}
