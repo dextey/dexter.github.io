@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="w-full sm:w-[90%] flex justify-between backdrop-blur-sm items-center    ">
       <div className="m-3  text-3xl font-extrabold">
-        <Link to={"/"}>
+        <Link to={"/about"}>
           <div className="homebtn">Dex</div>
         </Link>
       </div>

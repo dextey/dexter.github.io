@@ -27,20 +27,93 @@
   height: 0px;
 }
 .bullets > li:last-child::before {
-  background-color: red;
+  background-color: rgb(255, 227, 66);
 }
 
 .projects {
   position: relative;
 }
 
-.projects > div::before {
+.workItem {
+  position: relative;
+  animation: pop 2s ease-out forwards;
+
+  z-index: 10;
+  color: black;
+}
+
+@keyframes pop {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.workItem:hover::after {
+  transform: scale(10);
+  z-index: -1;
+}
+.workItem::before {
+  transform: scale(10);
   content: "";
   position: absolute;
-  top: 0%;
-  /* left: 50%; */
+  top: 45%;
+  left: 45%;
   border-radius: 100%;
-  width: 0%;
-  height: 100%;
-  background-color: red;
+  width: 10%;
+  height: 10%;
+  z-index: -1;
+  background-color: white;
+}
+.workItem::after {
+  background-color: rgba(255, 255, 63, 1);
+  z-index: -1;
+
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  border-radius: 100%;
+  width: 10%;
+  height: 10%;
+}
+
+.connections > a {
+  background-color: white;
+  transition: background-color 0.3s ease-out;
+  animation: pop 1s ease-out forwards;
+}
+
+.git {
+  color: black;
+}
+.tweet {
+  color: rgb(84, 112, 236);
+}
+.linked {
+  color: rgb(60, 60, 255);
+}
+.mail {
+  color: rgb(255, 77, 77);
+}
+
+.connections > a:hover {
+  color: white;
+}
+
+.git:hover {
+  background-color: black;
+}
+.tweet:hover {
+  background-color: rgb(84, 112, 236);
+}
+.linked:hover {
+  background-color: rgb(60, 60, 255);
+}
+.mail:hover {
+  background-color: rgb(255, 77, 77);
 }

@@ -1,0 +1,50 @@
+header {
+  animation: fade 3s ease-in 3s forwards;
+  background-color: #040f17;
+  color: white;
+  padding-block: 0.1rem;
+  opacity: 0;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.homebtn {
+  width: 10px;
+  height: 100%;
+  position: relative;
+}
+.homebtn::after {
+  top: 1px;
+  content: "";
+  border: 5px solid white;
+  border-radius: 100%;
+  width: 37px;
+  /* background: #000; */
+  height: 100%;
+  position: absolute;
+  transform: scale(1.4);
+  transition: transform 0.5s ease-out;
+}
+.homebtn::before {
+  top: 1px;
+  content: "";
+  width: 100px;
+  background-color: #040f17;
+  height: 100%;
+  position: absolute;
+  transition: width 0.7s ease-out;
+}
+
+.homebtn:hover::after {
+  transform: scale(0);
+}
+.homebtn:hover::before {
+  width: 0;
+}
