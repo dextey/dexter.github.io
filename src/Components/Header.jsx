@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./Header.css";
 function Header() {
   return (
-    <header className="w-full flex justify-between h-[50px]">
-      <div className="m-3  text-3xl font-extrabold text-yellow-200 font-fest ">
-        <Link to={"/"}> Dexter</Link>
+    <header className="w-full sm:w-[90%] flex justify-between backdrop-blur-sm items-center    ">
+      <div className="m-3  text-3xl font-extrabold">
+        <Link to={"/"}>
+          <div className="homebtn">Dex</div>
+        </Link>
       </div>
-      <div className=" flex justify-center items-center p-3 rounded-full hover:bg-pink-100 hover:text-neutral-600 bg-[#245372]  text-yellow-200 font-bold m-2">
-        <span class="material-symbols-outlined">send</span>
-        <a
-          href="mailto:dexterdevmode@gmail.com"
-          className="font-fest text-2xl px-2"
-        >
-          Contact me
-        </a>
+      <div className="flex px-10 gap-3 font-extrabold text-yellow-200">
+        <Link to={"/works"}>
+          <a>blueprints</a>
+        </Link>
+        <a href="mailto:dexterdevmode@gmail.com">contact</a>
+        <a href="#"></a>
       </div>
     </header>
   );

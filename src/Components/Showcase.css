@@ -1,0 +1,46 @@
+.bullets > li {
+  /* background-color: aqua; */
+  position: relative;
+}
+
+.bullets > li::before {
+  position: absolute;
+  content: " ";
+  left: -30px;
+  top: 8px;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  background-color: aqua;
+}
+.bullets > li::after {
+  position: absolute;
+  content: " ";
+  left: -24px;
+  top: 8px;
+  width: 2px;
+  height: 90px;
+  background-color: aqua;
+}
+
+.bullets > li:last-child::after {
+  height: 0px;
+}
+.bullets > li:last-child::before {
+  background-color: red;
+}
+
+.projects {
+  position: relative;
+}
+
+.projects > div::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  /* left: 50%; */
+  border-radius: 100%;
+  width: 0%;
+  height: 100%;
+  background-color: red;
+}

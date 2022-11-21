@@ -37,7 +37,7 @@
   animation: swing 1.3s ease-out 2s forwards;
   position: absolute;
   top: -1000px;
-  color: red;
+  color: rgb(237, 255, 79);
   /* background-color: white; */
   left: 0;
   font-weight: bolder;

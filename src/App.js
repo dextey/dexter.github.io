@@ -1,6 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import Main from "./Containers/Main";
 import Content from "./Containers/Content";
+import Works from "./Containers/Works";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
         </Route>
         <Route path="/about">
           <Content />
+        </Route>
+        <Route path="/works">
+          <Works />
         </Route>
       </Switch>
     </>
