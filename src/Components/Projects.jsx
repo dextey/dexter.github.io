@@ -1,4 +1,6 @@
 import React from "react";
+import { FaAngleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Projects() {
   const projects = [
@@ -38,7 +40,10 @@ function Projects() {
   return (
     <div className="container">
       <div className=" flex flex-col mt-10 justify-center mb-60">
-        <div className=" ">
+        <div className="flex items-center ">
+          <Link to={"/about"} className="text-white text-4xl">
+            <FaAngleLeft />
+          </Link>
           <span className="text-5xl font px-3 font-extrabold text-yellow-200">
             blueprints
           </span>

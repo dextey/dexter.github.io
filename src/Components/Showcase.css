@@ -1,6 +1,7 @@
 .bullets > li {
   /* background-color: aqua; */
   position: relative;
+  animation: fade 1s ease-out forwards;
 }
 
 .bullets > li::before {
@@ -36,17 +37,32 @@
 
 .workItem {
   position: relative;
-  animation: pop 2s ease-out forwards;
-
+  /* animation: pop 2s ease-out forwards; */
+  opacity: 0;
   z-index: 10;
   color: black;
 }
 
+.workItem:nth-child(2) {
+  animation-delay: 200ms;
+}
+.workItem:nth-child(3) {
+  animation-delay: 400ms;
+}
+.workItem:nth-child(4) {
+  animation-delay: 600ms;
+}
+.workItem:nth-child(5) {
+  animation-delay: 800ms;
+}
+
 @keyframes pop {
   0% {
+    opacity: 0;
     scale: 0;
   }
   100% {
+    opacity: 1;
     scale: 1;
   }
 }
@@ -85,7 +101,18 @@
 .connections > a {
   background-color: white;
   transition: background-color 0.3s ease-out;
-  animation: pop 1s ease-out forwards;
+  /* animation: pop 1s ease-out forwards; */
+  opacity: 0;
+}
+
+.c-item:nth-child(2) {
+  animation-delay: 400ms;
+}
+.c-item:nth-child(3) {
+  animation-delay: 600ms;
+}
+.c-item:nth-child(4) {
+  animation-delay: 800ms;
 }
 
 .git {
@@ -116,4 +143,8 @@
 }
 .mail:hover {
   background-color: rgb(255, 77, 77);
+}
+
+.popIn {
+  animation: pop 1.2s ease-out 0.2s forwards;
 }

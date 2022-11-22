@@ -18,25 +18,28 @@ function Footer() {
         <div className="connections flex sm:gap-4 text-2xl sm:px-10">
           <a
             href="mailto:dexterdevmode@gmail.com"
-            className="mail p-4 rounded-full hover:bg-yellow-400"
+            className="c-item mail p-4 rounded-full hover:bg-yellow-400"
           >
             <FiMail />
           </a>
           <a
             href="https://github.com/dextey"
             target="_blank"
-            className="git p-4 rounded-full hover:bg-yellow-400"
+            className="c-item git p-4 rounded-full hover:bg-yellow-400"
           >
             <FiGithub />
           </a>
           <a
             href="https://twitter.com/dexteeeey"
             target="_blank"
-            className="tweet p-4 rounded-full hover:bg-yellow-400"
+            className="c-item tweet p-4 rounded-full hover:bg-yellow-400"
           >
             <FiTwitter />
           </a>
-          <a href="#" className="linked p-4 rounded-full hover:bg-yellow-400">
+          <a
+            href="#"
+            className="c-item  linked p-4 rounded-full hover:bg-yellow-400"
+          >
             <FiLinkedin />
           </a>
         </div>

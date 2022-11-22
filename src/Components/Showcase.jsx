@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Showcase.css";
 import { GiSpikyExplosion } from "react-icons/gi";
 import { GoChevronRight } from "react-icons/go";
@@ -6,6 +6,29 @@ import { Link } from "react-router-dom";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 function Showcase() {
+  useEffect(() => {
+    const workItems = document.querySelectorAll(".workItem");
+    const connections = document.querySelectorAll(".c-item");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry.intersectionRatio);
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("popIn");
+        } else {
+          entry.target.classList.remove("popIn");
+        }
+      });
+    });
+
+    workItems.forEach((el) => observer.observe(el));
+    connections.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const works = [
     {
       at: "Trakgene",
@@ -61,23 +84,23 @@ function Showcase() {
             </li>
           </ul>
         </div>
-        <div className="flex justify-center md:w-4/12">
+        <div className="flex justify-center md:w-4/12 ">
           <div className="connections flex sm:flex-col gap-4 text-2xl px-10">
             <a
               href="https://github.com/dextey"
               target="_blank"
-              className="p-4 w-fit git rounded-full "
+              className="p-4 w-fit git rounded-full c-item "
             >
               <FiGithub />
             </a>
             <a
               href="https://twitter.com/dexteeeey"
               target="_blank"
-              className="p-4 w-fit tweet rounded-full "
+              className="p-4 w-fit tweet rounded-full c-item"
             >
               <FiTwitter />
             </a>
-            <a href="#" className="p-4 w-fit linked rounded-full ">
+            <a href="#" className="p-4 w-fit linked rounded-full c-item">
               <FiLinkedin />
             </a>
           </div>
@@ -96,8 +119,8 @@ function Showcase() {
             </div>
           );
         })}
-        <Link to={"/works"}>
-          <div className="p-4 workItem  sm:text-xl text-center font-extrabold h-[100px] w-[100px] sm:h-[125px] sm:w-[125px] md:h-[150px] md:w-[150px] rounded-full flex justify-center items-center ">
+        <Link className="workItem" to={"/works"}>
+          <div className=" p-4 sm:text-xl text-center font-extrabold h-[100px] w-[100px] sm:h-[125px] sm:w-[125px] md:h-[150px] md:w-[150px] rounded-full flex justify-center items-center ">
             <span className="flex gap-3 items-center">
               expand
               <span className="animate-bounce">
