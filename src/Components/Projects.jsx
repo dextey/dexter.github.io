@@ -1,39 +1,41 @@
 import React from "react";
-import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleLeft, FaEthereum } from "react-icons/fa";
+import { FiGithub, FiZap } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 function Projects() {
   const projects = [
     {
       id: 1,
-      image: "https://about.netflix.com/images/meta/netflix-symbol-black.png",
       name: "Flix ",
-      desc: "Flix is a netflix clone created using React and Firebase. ",
+      desc: "Flix is a netflix clone created using React and Firebase where users can watch trailers of all shows and movies. ",
       link: "https://netlifflix.netlify.app/",
     },
     {
       id: 2,
       name: "Fakey",
-      image:
-        "https://st2.depositphotos.com/1024516/7326/v/600/depositphotos_73261593-stock-illustration-vector-logo-for-letter-f.jpg",
-      desc: "Fakey is a Dapp e-commerce website made with react, firebase and Solidity which is deplyed on Polygon Network",
+      desc: "Fakey is a Dapp e-commerce website made with react, firebase and dolidity which is deplyed on Polygon Network.",
       link: "https://fakey.netlify.app/",
+      web3: true,
     },
     {
       id: 3,
-      image:
-        "https://cdn.pixabay.com/photo/2020/04/20/09/29/money-5067419__340.jpg",
       name: "Cryto Funder",
-      desc: "A funding Dapp in Goeril Network. Where people can fund ethereum and the owner can withdraw ",
+      desc: "A funding Dapp in Goeril Network where users can fund ethereum  with ease and be listed in top funders.",
       link: "https://crypto-funder.vercel.app/",
+      web3: true,
     },
     {
       id: 4,
       name: "Doit",
-      image:
-        "https://cdn.pixabay.com/photo/2019/06/19/05/53/board-4284009_960_720.jpg",
-      desc: "A Productive app for handling task with react-native and firebase ",
-      link: "",
+      desc: "A Productive app for handling task with react and firebase",
+      link: "#",
+    },
+    {
+      id: 5,
+      name: "Portflio",
+      desc: "A Responsive and animated React web app. ",
+      link: "#",
     },
   ];
 
@@ -44,41 +46,15 @@ function Projects() {
           <Link to={"/about"} className="text-white text-4xl">
             <FaAngleLeft />
           </Link>
-          <span className="text-5xl font px-3 font-extrabold text-yellow-200">
-            blueprints
+          <span className="text-xl sm:text-2xl md:text-3xl  font px-3 font-extrabold text-yellow-200">
+            back
           </span>
         </div>
-        <div className="flex  justify-center mt-16  ">
-          <div className="bg-slate-300 rounded-full">
-            <button className="mx-2 bg-slate-300 px-5 hover:bg-red-300 rounded-full">
-              All
-            </button>
-            <button className="mx-2 bg-slate-300 px-5 hover:bg-red-300 rounded-full">
-              Web 2.0
-            </button>
-            <button className="mx-2 bg-slate-300 px-5 hover:bg-red-300 rounded-full">
-              Web 3.0
-            </button>
-          </div>
-        </div>
-        <div className="grid sm:grid-cols-3 pt-7">
+
+        <div className="grid sm:grid-cols-1 pt-7">
           {projects.map((project) => {
             return <Project key={project.id} project={project} />;
           })}
-
-          <div className="flex flex-col  hover:bg-pink-300   p-4 m-4 bg-pink-100 rounded-md items-start">
-            <h3 className="text-2xl font-bold font-mono ">Others</h3>
-            <span className="font-mono text-[16px] sm:py-2 sm:block hidden  ">
-              Not yet, Here you go for more
-            </span>
-            <a
-              href="https://github.com/dextey"
-              target="_blank"
-              className="bg-slate-300 rounded-full px-4 sm:text-[1rem] "
-            >
-              github
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -91,38 +67,35 @@ const Project = ({ project }) => {
   return (
     <div
       id={project.id}
-      className="flex flex-col  hover:bg-yellow-200    m-4 bg-slate-500 rounded-md items-start"
+      className="flex flex-col  m-2 rounded-md justify-evenly bg-white/5 backdrop-blur-2xl"
     >
-      <div className="w-full">
-        {project.image && (
-          <img
-            src={project.image}
-            alt=""
-            className="rounded-t-md h-[270px] w-full"
-          />
-        )}
-      </div>
-      <div className="flex flex-col p-4">
-        <h3 className="text-2xl font-bold font-mono ">{project.name}</h3>
-        <span className="  font-mono text-[16px] sm:py-2 sm:block   ">
+      <div className="flex flex-col p-4 mx-2 mt-5 text-white">
+        <h3 className="text-2xl font-bold font-mono flex items-center gap-2 ">
+          {project.name}{" "}
+          {project.web3 && (
+            <span className="text-[1rem] text-black p-1 rounded-full bg-fuchsia-50">
+              <FaEthereum />
+            </span>
+          )}
+        </h3>
+        <span className=" md:w-7/12 font-mono text-[16px] sm:py-2 sm:block   ">
           {project.desc}
         </span>
-        <div className="flex gap-3 my-3">
-          <a
-            target="_blank"
-            href={project.link}
-            className="bg-slate-300 rounded-full px-4 sm:text-[1rem] hover:bg-black hover:text-white "
-          >
-            {project.name}
-          </a>
-          <a
-            target="_blank"
-            href={project.github}
-            className="bg-slate-300 rounded-full px-4 sm:text-[1rem] hover:bg-black hover:text-white "
-          >
-            Github
-          </a>
-        </div>
+      </div>
+      <div className="links flex gap-2  px-4 p-2  text-2xl text-white">
+        <a
+          target="_blank"
+          href={project.link}
+          className="hover:bg-yellow-50 hover:text-black p-4 rounded-full"
+        >
+          <FiZap />
+        </a>
+        <a
+          href={project.github}
+          className="hover:bg-yellow-50 hover:text-black p-4 rounded-full"
+        >
+          <FiGithub />
+        </a>
       </div>
     </div>
   );
