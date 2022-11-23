@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Dexter",
+  "short_name": "dexter",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
