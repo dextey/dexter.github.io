@@ -15,17 +15,35 @@
   background-color: aqua;
 }
 .bullets > li::after {
+  animation: grow 1.3s ease-out 1s infinite;
   position: absolute;
   content: " ";
-  left: -24px;
-  top: 8px;
+  left: -23.5px;
+  /* top: 8px; */
+  /* bottom: -40px; */
   width: 2px;
-  height: 90px;
-  background-color: aqua;
+
+  background-color: rgb(207, 255, 255);
+  transition: height 1s ease-out;
+}
+
+@keyframes grow {
+  0% {
+    top: 22px;
+    bottom: 50px;
+  }
+  50% {
+    top: 22px;
+    bottom: -40px;
+  }
+  100% {
+    top: 100px;
+    bottom: -40px;
+  }
 }
 
 .bullets > li:last-child::after {
-  height: 0px;
+  animation: none;
 }
 .bullets > li:last-child::before {
   background-color: rgb(255, 227, 66);
@@ -133,15 +151,19 @@
 }
 
 .git:hover {
+  color: white;
   background-color: black;
 }
 .tweet:hover {
+  color: white;
   background-color: rgb(84, 112, 236);
 }
 .linked:hover {
+  color: white;
   background-color: rgb(60, 60, 255);
 }
 .mail:hover {
+  color: white;
   background-color: rgb(255, 77, 77);
 }
 

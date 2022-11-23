@@ -126,11 +126,39 @@ h1::after {
 
 @media only screen and (max-width: 600px) {
   .username {
+    left: 30px;
     font-size: 4rem;
   }
 
   .split-text::after,
-  .split-text::after {
+  .split-text::before {
     font-size: 4rem;
+  }
+
+  .username > .split-text::after {
+    bottom: 10px;
+  }
+  .username > .split-text::before {
+    top: 16px;
+  }
+
+  @keyframes expand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 65%;
+    }
+  }
+
+  @keyframes skewR {
+    to {
+      transform: translateX(7px);
+    }
+  }
+  @keyframes skewL {
+    to {
+      transform: translateX(-7px);
+    }
   }
 }

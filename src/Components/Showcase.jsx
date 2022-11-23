@@ -12,7 +12,6 @@ function Showcase() {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry.intersectionRatio);
         if (entry.intersectionRatio > 0) {
           entry.target.classList.add("popIn");
         } else {

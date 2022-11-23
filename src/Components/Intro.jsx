@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Intro.css";
+import { FaChevronRight } from "react-icons/fa";
 
 function Intro() {
   return (
@@ -31,12 +32,12 @@ function Intro() {
           <div className="profile p-10  hidden lg:block rounded-full">
             <img src="chain.gif" alt="missed it!" className="rounded-full" />
           </div>
-          <div className="absolute bottom-7 mb-7 ">
+          <div className="absolute bottom-7 mb-7 flex justify-center ">
             <Link
               to="/about"
-              className="px-3 rounded-full font-extrabold text-3xl  text-white bg-teal-300 animate-pulse  "
+              className="flex p-2 items-center rounded-full font-extrabold text-2xl  text-black bg-[#ecff97] animate "
             >
-              &gt;
+              <FaChevronRight />
             </Link>
           </div>
         </section>
