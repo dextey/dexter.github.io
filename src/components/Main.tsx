@@ -21,15 +21,15 @@ export default function Main() {
               height={100}
               alt="arrow"
             />
-            <div className="absolute md:text-xl text-slate-800 right-[-1rem] top-[-.4rem]">a.k.a DEXTER</div>
+            <div className="absolute  md:text-xl text-slate-800 right-[-1rem] top-[-.4rem]">a.k.a DEXTER</div>
           </div>
           <div className={`${pacifico.className} flex flex-col gap-2`}>
-            <div className="text-4xl pb-6">hey there,</div>
-            <div className="md:text-[4.2rem]">
-              <span className="md:text-[2.4rem]">I'm</span> Sayanth Azhikodan
+            <div className="text-2xl sm:text-3xl md:text-4xl md:pb-6">hey there,</div>
+            <div className=" text-[2rem] sm:text-[3.4rem] md:text-[4.2rem]">
+              <span className="text-[1.6rem] sm:text-[1.4rem] md:text-[2.4rem]">I'm</span> Sayanth Azhikodan
             </div>
-            <div className="md:text-[4.2rem] pt-6">
-              <span className="md:text-[2.8rem]">a</span> Web developer
+            <div className="text-[2rem] sm:text-[3.4rem] md:text-[4.2rem] md:pt-6">
+              <span className="text-[1.6rem] sm:text-[1.8rem] md:text-[2.8rem]">a</span> Web developer
             </div>
           </div>
           <div className="relative w-full ">
