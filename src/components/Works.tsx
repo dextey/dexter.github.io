@@ -15,7 +15,7 @@ export default function Works() {
           })}
         </div>
       </div>
-      <div className="w-full px-4 pt-28">
+      <div className="w-full px-4 pt-28" id="blueprints">
         <div className="font-black text-4xl"># blueprints</div>
         <div className="flex flex-wrap gap-5 py-10">
           {projects.map((work) => {

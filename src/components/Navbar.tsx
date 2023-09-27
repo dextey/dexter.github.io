@@ -9,7 +9,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex px-10 gap-3 items-center font-extrabold text-yellow-200">
-        <Link href={"/"} className="contact ">
+        <Link href={"#blueprints"} className="contact ">
           <div>blueprints</div>
         </Link>
         <Link href="mailto:dexterdevmode@gmail.com" className="flex items-center gap-2   px-2 contact">
