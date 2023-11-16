@@ -50,8 +50,8 @@ const Work = ({ work }: workProps) => {
 
       <div
         className={`absolute flex flex-col-reverse justify-start py-3 px-1 ${
-          work.desc ? "bg-[#ffffffb7]" : "bg-[#ffffff9b]"
-        } hover:opacity-0 transition-opacity duration-500   h-full w-full rounded-2xl `}
+          work.desc ? "bg-[#ffffffcf]" : "bg-[#ffffff9b]"
+        } hover:opacity-0 transition-opa==asdfasdfasdfccity duration-500   h-full w-full rounded-2xl `}
       >
         {work.web3 && (
           <span className="bg-slate-800 w-fit rounded-full p-2 text-orange-300  absolute top-3 right-3 ">

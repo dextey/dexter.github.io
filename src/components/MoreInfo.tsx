@@ -7,7 +7,7 @@ const mono = JetBrains_Mono({ weight: ["400", "500"], subsets: ["latin"] });
 function MoreInfo() {
   return (
     <div
-      className={`container text-white py-10 flex flex-col gap-10 text-xl md:2xl lg:text-3xl px-10 bg-[#2a293b]   ${mono.className}`}
+      className={`container text-white py-10 flex flex-col gap-10 text-xl md:text-2xl px-10 bg-[#2a293b]   ${mono.className}`}
     >
       <h1 className="bg-yellow-100 w-fit text-black p-3">more info :</h1>
       <section>
