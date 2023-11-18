@@ -1,3 +1,11 @@
+export const exp = [
+  {
+    at: "Trakgene",
+    date: "Nov 2022 - Present ",
+    as: "Full Stack Web Developer",
+  },
+];
+
 export const works = [
   {
     id: 1,
@@ -28,7 +36,7 @@ export const projects = [
   {
     id: 3,
     name: "Fakey",
-    desc: "Fakey is a Dapp e-commerce website made with react, firebase and dolidity which is deplyed on Polygon Network.",
+    desc: "Fakey is a Dapp e-commerce website made with react, firebase and solidity which is deployed on Polygon Network.",
     link: "https://fakey.netlify.app/",
     github: "https://github.com/dextey/Fakey.git",
     img: "images/projects/fakey.png",

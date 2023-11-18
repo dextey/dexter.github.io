@@ -1,7 +1,5 @@
 import React from "react";
-import Planet from "./Planet";
 import Works from "./Works";
-import CurrentlyAt from "./CurrentlyAt";
 
 export default function Projects() {
   return (

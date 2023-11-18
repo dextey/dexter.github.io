@@ -1,4 +1,3 @@
-"use client";
 function ProgressBar() {
   return (
     <div className="flex flex-col text-yellow-500  w-full  ">

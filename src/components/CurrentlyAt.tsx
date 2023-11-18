@@ -1,29 +1,22 @@
 import { GoChevronRight } from "react-icons/go";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 import Link from "next/link";
+import { exp } from "@/data/data";
 
 export default function CurrentlyAt() {
-  const works = [
-    {
-      at: "Trakgene",
-      date: "Sep 2022 - Present (Contract)",
-      as: "Full Stack Web Developer",
-    },
-  ];
-
   return (
-    <div className="  flex flex-col pt-32 w-3/6">
+    <div className="flex flex-col pt-32 sm:w-3/6 ">
       <div className="flex flex-col sm:flex-row items-center justify-between">
-        <div className="flex flex-col px-5">
+        <div className="flex flex-col p-5 rounded-md bg-violet-100 bg-opacity-40  sm:bg-transparent">
           <div className="font-extrabold text-3xl">Currently at: </div>
           <ul className="mt-14 my-10 ml-10 text-xl bullets">
-            {works.map((work) => {
+            {exp.map((work) => {
               return (
                 <li key={work.date} className="flex gap-3 mb-8">
                   <span className="flex flex-col">
-                    <span>
-                      {work.at}
-                      <span className="text-[1rem] ml-3 bg-white/30 px-4 rounded-full">{work.as}</span>
+                    <span className="flex lg:flex-row  flex-col  rounded-full">
+                      <span className="bg-yellow-200 px-2 rounded-full">{work.at}</span>
+                      <span className="text-[.8rem] sm:text-[1rem] ml-3 lg:px-2 ">{work.as}</span>
                     </span>
                     <span className="text-[12px]">{work.date}</span>
                   </span>
@@ -32,11 +25,11 @@ export default function CurrentlyAt() {
             })}
             <li className="flex gap-3 mb-8">
               <a href="mailto:dexterdevmode@gmail.com" className="flex flex-col ">
-                <span className="flex">
+                <span className="flex w-full flex-col 2xl:flex-row">
                   Let's work together
-                  <span className=" flex items-center gap-5 text-[1rem] ml-3 hover:bg-yellow-200 hover:text-black bg-white/30 px-4 rounded-full">
-                    <span>let's chat</span>
-                    <span className="text-xl  text-yellow-300  ">
+                  <span className=" px-4 flex items-center gap-5 text-[1rem] max-w-max lg:ml-5 bg-violet-200  hover:bg-yellow-200 hover:text-black   rounded-full">
+                    <span className=" text-[.8rem] ">discuss briefly?</span>
+                    <span className="text-xl  text-black animate-pulse ">
                       <GoChevronRight />
                     </span>
                   </span>
@@ -62,7 +55,11 @@ export default function CurrentlyAt() {
             >
               <FiTwitter />
             </Link>
-            <Link href="#" className="p-4 w-fit linked rounded-full c-item">
+            <Link
+              href="https://www.linkedin.com/in/sayanth-azhikodan-36a5b0259/"
+              target="_blank"
+              className="p-4 w-fit linked rounded-full c-item"
+            >
               <FiLinkedin />
             </Link>
           </div>
