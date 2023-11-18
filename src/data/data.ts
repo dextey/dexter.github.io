@@ -10,6 +10,15 @@ export const works = [
 export const projects = [
   {
     id: 1,
+    name: "Loot ",
+    desc: "A fully fledged full Stack micro-service based ticket booking app  ",
+    link: null,
+    github: "https://github.com/dextey/Loot",
+    img: "",
+    progress: true,
+  },
+  {
+    id: 2,
     name: "Flix ",
     desc: "Flix is a netflix clone created using React and Firebase where users can watch trailers of all shows and movies. ",
     link: "https://netlifflix.netlify.app/",
@@ -17,7 +26,7 @@ export const projects = [
     img: "images/projects/flix.png",
   },
   {
-    id: 2,
+    id: 3,
     name: "Fakey",
     desc: "Fakey is a Dapp e-commerce website made with react, firebase and dolidity which is deplyed on Polygon Network.",
     link: "https://fakey.netlify.app/",
@@ -26,7 +35,7 @@ export const projects = [
     web3: true,
   },
   {
-    id: 3,
+    id: 4,
     name: "Cryto Funder",
     desc: "A funding Dapp in Goeril Network where users can fund ethereum  with ease and be listed in top funders.",
     link: "https://crypto-funder.vercel.app/",

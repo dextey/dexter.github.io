@@ -1,18 +1,27 @@
 import Image from "next/image";
 import React from "react";
 import Navbar from "./Navbar";
-import { Pacifico } from "next/font/google";
+import { Combo, Comic_Neue, JetBrains_Mono, Monoton, Monsieur_La_Doulaise, Pacifico } from "next/font/google";
+import Link from "next/link";
 
 const pacifico = Pacifico({ weight: "400", subsets: ["latin"] });
+const mono = JetBrains_Mono({ weight: "700", subsets: ["latin"] });
 
 export default function Main() {
   return (
     <div className="overflow-hidden relative flex flex-col items-center bg-[#fefefe]">
+      <div className="absolute w-full  h-[100vh] ">
+        <img
+          className="object-cover bg-blend-overlay absolute  bg-red-200  w-[100%] h-[100vh]"
+          src={"/images/stars.svg"}
+          alt="stars"
+        />
+      </div>
       <div className="w-full absolute z-50 top-8  flex justify-center  ">
         <Navbar />
       </div>
       <main className="flex min-h-screen w-full overflow-y-hidden  relative p-2 items-center ">
-        <div className="absolute flex flex-col p-4 md:text-3xl top-[30%] left-[10%]">
+        <div className="absolute flex flex-col p-4 md:text-3xl top-[30%] left-[10%] z-50 ">
           <div className="relative w-full ">
             <Image
               className="object-cover bg-blend-overlay absolute right-20 top-0"
@@ -21,12 +30,15 @@ export default function Main() {
               height={100}
               alt="arrow"
             />
-            <div className="absolute  md:text-xl text-slate-800 right-[-1rem] top-[-.4rem]">a.k.a DEXTER</div>
+            <Link href={"/about"} className="absolute  md:text-xl text-slate-800 right-[-1rem] top-[-.4rem]">
+              a.k.a DEXTER
+            </Link>
           </div>
-          <div className={`${pacifico.className} flex flex-col gap-2`}>
+          <div className={`${mono.className} flex flex-col gap-2`}>
             <div className="text-2xl sm:text-3xl md:text-4xl md:pb-6">hey there,</div>
             <div className=" text-[2rem] sm:text-[3.4rem] md:text-[4.2rem]">
-              <span className="text-[1.6rem] sm:text-[1.4rem] md:text-[2.4rem]">I'm</span> Sayanth Azhikodan
+              <span className="text-[1.6rem] sm:text-[1.4rem] md:text-[2.5rem]">I'm</span>
+              <span className={`${pacifico.className}`}> Dextey</span>
             </div>
             <div className="text-[2rem] sm:text-[3.4rem] md:text-[4.2rem] md:pt-6">
               <span className="text-[1.6rem] sm:text-[1.8rem] md:text-[2.8rem]">a</span> Web developer
@@ -44,8 +56,9 @@ export default function Main() {
           </div>
         </div>
         <div className="w-full flex justify-between h">
-          <div className="w-2/6"></div>
-          <div className=" w-4/6 flex items-center justify-center  ">
+          <div className="w-5/12"></div>
+          <div className=" w-7/12 flex items-center justify-center  relative">
+            <div className="w-full h-full  bg-[#ffffff74] lg:bg-transparent  absolute"></div>
             <Image
               className="object-cover bg-blend-overlay"
               src={"/images/profile.png"}
@@ -55,7 +68,7 @@ export default function Main() {
             />
           </div>
         </div>
-        <div className="absolute h-[300px] w-[300px] bg-slate-800 rounded-tr-full left-0 bottom-0"></div>
+        <div className="absolute  h-[150px] w-[150px]  sm:h-[200px] sm:w-[200px]  md:h-[300px] md:w-[300px] bg-slate-800 rounded-tr-full left-0 bottom-0"></div>
       </main>
     </div>
   );

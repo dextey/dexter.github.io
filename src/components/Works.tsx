@@ -1,3 +1,4 @@
+import ProgressBar from "@/UI/ProgressBar";
 import { projects, works } from "@/data/data";
 
 import Link from "next/link";
@@ -31,22 +32,23 @@ interface workProps {
   work: {
     id: number;
     name: string;
-    img: string;
-    link: string;
+    img?: string;
+    link: string | null;
     desc?: string;
     github?: string;
     web3?: boolean;
+    progress?: boolean;
   };
 }
 
 const Work = ({ work }: workProps) => {
   return (
     <Link
-      href={work.link}
-      target="_blank"
+      href={work.link ?? "#blueprints"}
+      target={work.link ?? "_blank"}
       className={`w-96 bg-slate-100 h-52 mx-1 rounded-lg flex  relative shadow-lg hover:scale-105`}
     >
-      <img src={work.img} alt={work.name} className="object-fit h-full bg-cover rounded-2xl" />
+      {work.img && <img src={work.img} alt={work.name} className="object-fit h-full bg-cover rounded-2xl" />}
 
       <div
         className={`absolute flex flex-col-reverse justify-start py-3 px-1 ${
@@ -60,6 +62,11 @@ const Work = ({ work }: workProps) => {
         )}
         <span className="text-xl font-black bg-orange-100 w-fit p-1 px-3 rounded-full ju\">{work.name}</span>
         <span className=" text-[.9rem] w-fit p-3 font-bold  ">{work.desc}</span>
+        {work.progress && (
+          <div className="w-full py-4 flex px-4">
+            <ProgressBar />
+          </div>
+        )}
       </div>
     </Link>
   );
