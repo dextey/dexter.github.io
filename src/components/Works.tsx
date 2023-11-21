@@ -43,33 +43,41 @@ interface workProps {
 
 const Work = ({ work }: workProps) => {
   return (
-    <Link
-      href={work.link ?? "#blueprints"}
-      target={work.link ?? "_blank"}
-      className={`w-96 bg-slate-100 h-52 mx-1 rounded-lg flex  relative shadow-lg hover:scale-105`}
-    >
+    <div className={`w-96 bg-slate-100 h-52 mx-1 rounded-lg flex  relative shadow-lg hover:scale-105`}>
       {work.img && <img src={work.img} alt={work.name} className="object-fit h-full bg-cover rounded-2xl" />}
 
       <div
-        className={`absolute flex flex-col-reverse justify-start py-3 px-1 ${
-          work.desc ? "bg-[#ffffffcf]" : "bg-[#ffffff9b]"
-        } ${
-          !work.progress && "hover:opacity-0"
-        } transition-opacity duration-500   h-full w-full rounded-2xl `}
+        className={`absolute flex flex-col-reverse justify-start py-3 px-1
+        ${work.desc ? "bg-[#ffffffcf]" : "bg-[#ffffff9b]"} hover:bg-[#ffffff1e] transition-colors
+          duration-500   h-full w-full rounded-2xl group`}
       >
         {work.web3 && (
           <span className="bg-slate-800 w-fit rounded-full p-2 text-orange-300  absolute top-3 right-3 ">
             <FaEthereum />
           </span>
         )}
-        <span className="text-xl font-black bg-orange-100 w-fit p-1 px-3 rounded-full ju\">{work.name}</span>
-        <span className=" text-[.9rem] w-fit p-3 font-bold  ">{work.desc}</span>
+        <div className="flex justify-between items-center px-2">
+          <span className="text-xl font-black bg-orange-100 w-fit p-1 px-3 rounded-full ju\">
+            {work.name}
+          </span>
+          <div className="flex gap-2 text-xl">
+            <Link href={work.github ?? "#blueprints"} target={work.github ?? "_blank"}>
+              <FiGithub />
+            </Link>
+            <Link href={work.link ?? "#blueprints"} target={work.link ?? "_blank"}>
+              <FiZap />
+            </Link>
+          </div>
+        </div>
+        <span className=" text-[.9rem] w-fit p-3 font-bold hover:text ">
+          <p className="group-hover:bg-violet-100  leading-7 inline my-6">{work.desc}</p>
+        </span>
         {work.progress && (
           <div className="w-full py-4 flex px-4">
             <ProgressBar />
           </div>
         )}
       </div>
-    </Link>
+    </div>
   );
 };
