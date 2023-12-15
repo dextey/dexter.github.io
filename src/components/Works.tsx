@@ -9,7 +9,7 @@ export default function Works() {
   return (
     <div className="  flex flex-col py-20">
       <div className="w-full px-4">
-        <div className="font-black text-4xl">works</div>
+        <div className="font-black text-4xl"> # works</div>
         <div className="flex flex-wrap py-10">
           {works.map((work) => {
             return <Work work={work} />;
@@ -57,24 +57,45 @@ const Work = ({ work }: workProps) => {
           </span>
         )}
         <div className="flex justify-between items-center px-2">
-          <span className="text-xl font-black bg-orange-100 w-fit p-1 px-3 rounded-full ju\">
-            {work.name}
-          </span>
+          <span className="text-xl font-black bg-orange-100 w-fit p-1 px-3 rounded-full">{work.name}</span>
           <div className="flex gap-2 text-xl">
-            <Link href={work.github ?? "#blueprints"} target={work.github ?? "_blank"}>
-              <FiGithub />
-            </Link>
-            <Link href={work.link ?? "#blueprints"} target={work.link ?? "_blank"}>
-              <FiZap />
-            </Link>
+            {work.github && (
+              <Link
+                href={work.github}
+                target="_blank"
+                className="bg-white flex rounded-full p-3 hover:bg-black hover:text-white transition-transform transform-none"
+              >
+                <FiGithub />
+              </Link>
+            )}
+            {work.link && (
+              <Link
+                href={work.link}
+                target="_blank"
+                className="bg-white flex rounded-full p-3 hover:bg-purple-500  hover:text-yellow-500 transition-transform transform-none"
+              >
+                <FiZap />
+              </Link>
+            )}
           </div>
         </div>
         <span className=" text-[.9rem] w-fit p-3 font-bold hover:text ">
-          <p className="group-hover:bg-violet-100  leading-7 inline my-6">{work.desc}</p>
+          <p className="group-hover:hidden  leading-7 inline my-6">{work.desc}</p>
         </span>
         {work.progress && (
           <div className="w-full py-4 flex px-4">
-            <ProgressBar />
+            <div className="flex flex-col text-yellow-500  w-full  ">
+              <div className="w-full text-xl font-bold  relative  after:absolute after:content-['...'] after:-top-2 after:left-[7.4rem] after:text-3xl">
+                in Progress
+              </div>
+              <div
+                className=" bg-violet-200 h-[10px] w-[100%] text-yellow-500 z-10 relative rounded-full 
+              before:absolute  before:w-[15%] before:bg-yellow-200  before:h-[10px] before:content-normal before:rounded-full
+              after:absolute  after:w-[65%] after:bg-violet-500 after:h-[10px] after:content-normal after:rounded-full
+              progressbar
+              "
+              ></div>
+            </div>
           </div>
         )}
       </div>
