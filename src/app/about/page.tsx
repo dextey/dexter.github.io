@@ -1,13 +1,15 @@
-import MoreInfo from "@/components/MoreInfo";
-import Navbar from "@/components/Navbar";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
+import Main from "@/components/Main";
+import Projects from "@/components/Projects";
 
-export default function About() {
+export default function Home() {
   return (
-    <div className="py-10  flex 2xl:h-[100vh]  ">
-      <div className="container mx-auto">
-        <Navbar variant="dark" />
-        <MoreInfo />
-      </div>
-    </div>
+    <>
+      <Main />
+      <Experience />
+      <Projects />
+      <Footer />
+    </>
   );
 }
