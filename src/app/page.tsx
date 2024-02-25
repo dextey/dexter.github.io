@@ -2,6 +2,8 @@ import { getBlogs } from "@/data/blogs";
 import { formatDate, formatDateString } from "@/utils/utils";
 import axios from "axios";
 import Link from "next/link";
+import { FaGithub, FaTwitter } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si";
 import { useQuery } from "react-query";
 
 export default async function Home() {
@@ -19,8 +21,28 @@ export default async function Home() {
           </div>
         </nav>
 
-        <section className="flex-1 text-base">
-          <div className="flex flex-col py-10">
+        <section className="container flex px-7 pt-7 text-2xl gap-3 flex-col">
+          <span className="text-sm md:text-md lg:text-2xl font-mono font-extrabold typewriter">
+            hey there,
+          </span>
+          <div className="flex gap-2 text-sm sm:text-lg lg:text-2xl text-yellow-100">
+            <Link target="_blank" href="http://github.com/dextey">
+              <FaGithub />
+            </Link>
+            <Link target="_blank" href="http://twitter.com/dextey">
+              <FaTwitter />
+            </Link>
+          </div>
+        </section>
+
+        <section className="flex flex-1 text-base">
+          <div className="font-mono  border-r-2  hidden lg:flex flex-col w-1/6  my-8 py-4 items-center gap-2 border-[#3d3d3d] ">
+            <div className="flex flex-col gap-2 font-bold">
+              <span className="hover:bg-yellow-100 hover:text-black px-4 py-1">#featured</span>
+              <span className="hover:bg-yellow-100 hover:text-black px-4 py-1">#weekly</span>
+            </div>
+          </div>
+          <div className="flex w-full flex-col lg:p-5">
             {blogs?.map(({ node }: any, index: number) => {
               const date = formatDateString(node?.publishedAt || Date.now());
 

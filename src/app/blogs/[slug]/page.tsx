@@ -34,10 +34,10 @@ export default function page({ searchParams: { id } }: { searchParams: { id: str
             <div className="flex gap-3    text-xl  mb-10">
               <div className="flex-1 flex justify-center">
                 {blog?.content.html ? (
-                  <div
+                  <article
                     className="flex  flex-col gap-8 font-mono p-5 mb-16 text-xl  md:p-16 lg:w-3/5 rounded-2xl "
                     dangerouslySetInnerHTML={{ __html: blog?.content.html }}
-                  ></div>
+                  ></article>
                 ) : (
                   <div className="flex flex-col gap-10 p-5 mb-16 text-xl md:p-16 lg:mx-20 rounded-2xl ">
                     Opss! no content found
