@@ -22,8 +22,8 @@ export default async function Home() {
         </nav>
 
         <section className="container flex px-7 pt-7 text-2xl gap-3 flex-col">
-          <span className="text-sm md:text-md lg:text-2xl font-mono font-extrabold typewriter">
-            hey there,
+          <span className="text-sm md:text-md lg:text-2xl font-mono ">
+            hey there,<span className="w-2 bg-yellow-100  h-2 text-yellow-100 animate-pulse">:</span>
           </span>
           <div className="flex gap-2 text-sm sm:text-lg lg:text-2xl text-yellow-100">
             <Link target="_blank" href="http://github.com/dextey">
